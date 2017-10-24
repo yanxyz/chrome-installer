@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    #version {
+      width: 20em;
+    }
+
+    #list .version {
+      min-width: 6em;
+      display: inline-block;
+    }
+
+    #list .date {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Chrome installer</h1>
+
+  <ul>
+    <li>只有 Windows 数据，数据来自
+      <a href="http://portableapps.com/apps/internet/google_chrome_portable">Google Chrome Portable</a> 维护的
+      <a href="http://www.geocities.jp/ecvcn/exam/chrome_installer.html">Chrome installers 列表</a>。
+    </li>
+    <li>下载链接对应的文件可能不存在，因此尽早保存。</li>
+    <li>Made by Ivan Yan, file an issue on
+      <a href="https://github.com/yanxyz/chrome-installer">Github</a>.
+    </li>
+  </ul>
+
+  <p>
+    <input type="search" id="version" placeholder="输入版本，查找更新版本">
+    <input type="checkbox" id="x64">x64
+  </p>
+  <p>新版本</p>
+  <ul id="list"></ul>
+
+  <script type="x-template" id="template-list">
+  <li id="v{{version}}">
+    <span class="version"><a href="{{update}}">{{version}}</a></span>
+    <span class="date">{{date}}</span>
+    [<a href="{{qq}}">pc.qq.com</a>
+    <a href="{{google}}">dl.google.com</a>]
+  </li>
+  </script>
+
+  <script src="data.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

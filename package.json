@@ -1,0 +1,12 @@
+{
+  "name": "chrome-installer",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Ivan Yan",
+  "license": "MIT",
+  "private": true,
+  "repository": "yanxyz/chrome-installer",
+  "eslintIgnore": ["**/data.js"],
+  "dependencies": {
+  }
+}
